@@ -1,0 +1,13 @@
+{
+  "clip": "Idle_Breathing",
+  "duration_seconds": 4.0,
+  "fps": 30,
+  "frames": [
+    1,
+    121
+  ],
+  "loop_error": 0.0,
+  "triangles": 5097,
+  "bones": 27,
+  "root_motion": false
+}

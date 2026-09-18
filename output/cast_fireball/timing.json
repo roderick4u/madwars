@@ -1,0 +1,20 @@
+{
+  "fps": 30,
+  "start_frame": 1,
+  "release_frame": 16,
+  "cast_seconds": 0.5,
+  "end_frame": 31,
+  "total_clip_seconds": 1,
+  "forward_blender": [
+    0,
+    -1,
+    0
+  ],
+  "forward_unity": [
+    0,
+    0,
+    1
+  ],
+  "preview_fireball_only": true,
+  "root_motion": false
+}

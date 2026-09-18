@@ -1,0 +1,25 @@
+{
+  "triangles": 1216,
+  "vertices_blender": 756,
+  "triangles_per_arm": {
+    "Warlock_Arm_L": 608,
+    "Warlock_Arm_R": 608
+  },
+  "material_count": 1,
+  "texture_resolution": 1024,
+  "pose": "T-pose",
+  "rigged": false,
+  "shoulder_L": [
+    0.224,
+    0.016,
+    -0.122
+  ],
+  "shoulder_R": [
+    -0.224,
+    0.016,
+    -0.122
+  ],
+  "front": "-Y",
+  "triangles_glb": 1216,
+  "vertices_glb": 2432
+}

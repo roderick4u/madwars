@@ -1,0 +1,9 @@
+{
+  "triangles": 1750,
+  "vertices": 948,
+  "materials": 1,
+  "texture_resolution": 1024,
+  "front": "-Y",
+  "neck_connection": "origin (0,0,0)",
+  "rigged": false
+}

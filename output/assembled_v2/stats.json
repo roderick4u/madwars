@@ -1,0 +1,62 @@
+{
+  "triangles": 5097,
+  "vertices_blender": 3065,
+  "materials": 1,
+  "mesh_parts": 9,
+  "rigged": false,
+  "front": "-Y",
+  "ground_z": 0,
+  "parts": {
+    "Warlock_Head_LOD0": {
+      "triangles": 1750,
+      "vertices": 948
+    },
+    "Warlock_Torso_Cape_LOD0": {
+      "triangles": 1161,
+      "vertices": 737
+    },
+    "Warlock_Arm_L": {
+      "triangles": 608,
+      "vertices": 378
+    },
+    "Warlock_Arm_R": {
+      "triangles": 608,
+      "vertices": 378
+    },
+    "Warlock_Hips": {
+      "triangles": 110,
+      "vertices": 64
+    },
+    "Warlock_Leg_L": {
+      "triangles": 312,
+      "vertices": 186
+    },
+    "Warlock_Leg_R": {
+      "triangles": 312,
+      "vertices": 186
+    },
+    "Warlock_Split_Robe": {
+      "triangles": 172,
+      "vertices": 140
+    },
+    "Warlock_Hood_Cowl": {
+      "triangles": 64,
+      "vertices": 48
+    }
+  },
+  "bounds": {
+    "min": [
+      -0.7981382608413696,
+      -0.15600000321865082,
+      0.0
+    ],
+    "max": [
+      0.7981382608413696,
+      0.26499998569488525,
+      1.5562455654144287
+    ]
+  },
+  "glb_triangles": 5097,
+  "glb_vertices": 10217,
+  "glb_primitives": 1
+}

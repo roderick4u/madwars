@@ -1,0 +1,21 @@
+{
+  "triangles": 906,
+  "vertices_blender": 576,
+  "triangles_by_object": {
+    "Warlock_Hips": 110,
+    "Warlock_Leg_L": 312,
+    "Warlock_Leg_R": 312,
+    "Warlock_Split_Robe": 172
+  },
+  "materials": 1,
+  "texture_resolution": 1024,
+  "waist_connection": [
+    0,
+    0.016,
+    -0.465
+  ],
+  "ground_z": -1.127,
+  "front": "-Y",
+  "rigged": false,
+  "triangles_glb": 906
+}

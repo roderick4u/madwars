@@ -1,0 +1,14 @@
+{
+  "triangles": 5097,
+  "bones": 27,
+  "clip": "Walk_InPlace",
+  "fps": 30,
+  "export_frames": [
+    1,
+    33
+  ],
+  "duration_seconds": 1.0666666666666667,
+  "loop_matrix_error": 0.0,
+  "max_influences": 2,
+  "root_motion": false
+}

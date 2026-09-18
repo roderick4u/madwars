@@ -1,0 +1,54 @@
+# Unity generated/local files (at any project depth)
+**/[Ll]ibrary/
+**/[Tt]emp/
+**/[Oo]bj/
+**/[Bb]uild/
+**/[Bb]uilds/
+**/[Ll]ogs/
+**/[Uu]ser[Ss]ettings/
+**/MemoryCaptures/
+**/Recordings/
+**/.vs/
+**/.vscode/
+*.csproj
+*.sln
+*.slnx
+*.user
+*.pidb
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+**/Assets/Screenshots/
+**/Assets/Screenshots.meta
+**/Assets/_Recovery/
+**/Assets/_Recovery.meta
+**/ProjectSettings/Packages/com.unity.ai.assistant/
+# Blender backups and regenerable frame sequences
+*.blend[0-9]*
+*.blend@
+/output/**/Cast_[0-9]*.png
+/output/**/Idle_[0-9]*.png
+/output/**/Walk_[0-9]*.png
+/output/**/Run_[0-9]*.png
+# Canonical C# and shaders are in UnityProject/Assets; old installation snippets are local only.
+/*.cs
+/*.shader
+# Credentials, signing and host-local configuration
+.env
+.env.*
+!.env.example
+*.keystore
+*.jks
+*.pfx
+*.p12
+*.pem
+*.key
+.npmrc
+.upmconfig.toml
+.DS_Store
+Thumbs.db
+__pycache__/
+*.pyc
+.venv/
+repo-audit.local.json

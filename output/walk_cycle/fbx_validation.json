@@ -1,0 +1,10 @@
+{
+  "reimport_ok": true,
+  "bones": 27,
+  "action": "Warlock_Rig|Scene",
+  "frame_range": [
+    2.0,
+    34.0
+  ],
+  "loop_error": 0.0
+}

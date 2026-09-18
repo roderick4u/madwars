@@ -1,0 +1,17 @@
+{
+  "triangles": 1161,
+  "vertices_blender": 737,
+  "materials": 1,
+  "texture_resolution": 1024,
+  "front": "-Y",
+  "head_connection": [
+    0,
+    0,
+    0
+  ],
+  "waist_z": -0.465,
+  "includes_cape": true,
+  "rigged": false,
+  "triangles_glb": 1161,
+  "vertices_glb": 2361
+}

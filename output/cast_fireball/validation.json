@@ -1,0 +1,9 @@
+{
+  "release_seconds": 0.5,
+  "duration_seconds": 1,
+  "foot_drift_m": 2.6366560800193087e-08,
+  "root_matrix_drift": 0,
+  "staff_grip_error_m": 0,
+  "ready_pose_return_error": 0.0,
+  "finite_transforms": true
+}

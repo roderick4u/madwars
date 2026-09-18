@@ -1,0 +1,13 @@
+{
+  "clip": "Run_InPlace",
+  "duration_seconds": 0.8,
+  "fps": 30,
+  "frames": [
+    1,
+    25
+  ],
+  "loop_error": 1.4695761072969157e-18,
+  "triangles": 5097,
+  "bones": 27,
+  "root_motion": false
+}
