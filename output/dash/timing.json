@@ -1,0 +1,19 @@
+{
+  "animation": "Dash_Charge_Burst_StaffSlam",
+  "fps": 30,
+  "start_frame": 1,
+  "charge_frames": [1, 19],
+  "dash_frames": [20, 27],
+  "staff_ground_impact_frame": 31,
+  "staff_ground_impact_seconds": 1.0,
+  "end_frame": 64,
+  "duration_seconds": 2.1,
+  "preview_distance_meters": 6.0,
+  "forward_blender": [0, -1, 0],
+  "forward_unity": [0, 0, 1],
+  "afterimage_samples": [20, 21, 22, 23, 24, 25],
+  "fx_in_blend_only": true,
+  "in_place_export": "Warlock_Dash.fbx",
+  "root_motion_export": "Warlock_Dash_RootMotion.fbx",
+  "integration_note": "Rotate the actor toward cursor ground position when casting. Use the in-place clip and move the actor in a straight line during frames 20-27. Runtime afterimages/impact FX and cursor input must be implemented separately in Unity."
+}

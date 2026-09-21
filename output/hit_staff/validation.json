@@ -1,0 +1,14 @@
+{
+  "animation": "Hit_Staff_RightToLeft_LeftHandFixed",
+  "saved": true,
+  "fps": 30,
+  "frames": [
+    1,
+    37
+  ],
+  "duration_seconds": 1.2,
+  "hit_frame": 18,
+  "left_wrist_max_angle_degrees": 9.032961889608652,
+  "trail": "green tip sweep frames 14-24",
+  "root_motion": false
+}

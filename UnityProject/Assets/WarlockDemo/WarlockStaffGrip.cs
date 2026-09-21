@@ -12,6 +12,13 @@ public class WarlockStaffGrip : MonoBehaviour
  void LateUpdate(){ApplyPose();}
  public void ApplyPose(){
   if(!hand||!staff||!upperArm||!forearm)return;
+  var cast=GetComponent<WarlockFireballCast>();
+  if(cast && cast.IsCasting){
+   staff.position=hand.TransformPoint(gripInHand);
+   staff.rotation=hand.rotation*Quaternion.Inverse(handBasis);
+   staff.localScale=Vector3.one*staffScale;
+   return;
+  }
   var state=animator.GetCurrentAnimatorStateInfo(0);
   Vector3 reference=ReferenceHand(state);
   float activity=Activity(state), follow=Follow(state);

@@ -17,8 +17,12 @@ La escena predeterminada de Build Settings de la plantilla puede seguir siendo S
 - **Shift:** caminar.
 - **Clic derecho en el plano:** mover al punto seleccionado.
 - **Espacio:** activar/desactivar el recorrido automático.
+- **Clic izquierdo:** lanzar fireball hacia el cursor.
+- **E:** golpe de bastón.
+- **R:** invocar un trueno en el cursor.
+- **Q:** dash en línea recta hacia el cursor, con carga, afterimages e impacto de bastón.
 
-La cámara es isométrica. La fireball realiza vuelos repetidos de demostración: no representa todavía un ataque activable por el jugador.
+La cámara es isométrica. Puedes retomar el movimiento al salir la fireball o al impactar el bastón del dash. WASD y las órdenes de clic derecho permiten interrumpir la recuperación; sin una orden de movimiento, la animación termina normalmente.
 
 ## Contenido y estado
 
@@ -31,9 +35,12 @@ La cámara es isométrica. La fireball realiza vuelos repetidos de demostración
 | Fireball | Malla de 140 triángulos, toon y deformación de vértices en GPU |
 | Estela y chispas | Cubos/tetraedros, máximo combinado de 64 partículas, reducción lineal y giro XYZ |
 | Acabado del fuego | Trail Renderer, luz puntual sin sombras, emisión HDR y Volume con Bloom |
-| Casteo | Vista previa Blender y FBX; lanzamiento a 0,5 s, clip total de 1 s con recuperación |
+| Casteo | Integrado; lanzamiento a 0,5 s y recuperación interrumpible al moverse |
+| Golpe de bastón | Animación, impacto verde y empuje del objetivo de práctica |
+| Trueno | R al cursor; velocidad de empuje 6, desaceleración horizontal 5 y máximo 9 |
+| Dash | Q al cursor; clip de 52 frames a 30 FPS (1,7 s), impacto en frame 31 (1 s), empuje 6/5/9 |
 
-**Pendiente:** conectar el clip de casteo al Animator y al lanzamiento real en la dirección del jugador; añadir colisiones, daño, controles táctiles y pruebas de rendimiento móvil. La física de la capa funciona en Unity; las fuentes antiguas de Blender conservan sus distintas etapas de desarrollo.
+**Pendiente:** sistema de daño/vida, controles táctiles y pruebas de rendimiento móvil. Las habilidades ya tienen colisiones y empuje sobre el objetivo de práctica. La física de la capa funciona en Unity; las fuentes antiguas de Blender conservan sus distintas etapas de desarrollo.
 
 ## Estructura
 
@@ -57,6 +64,13 @@ Usa **Blender 5.2.2**. Los archivos `.blend` contienen texturas empaquetadas.
 - Carrera: `output/run_dynamic/Warlock_Run.blend`
 - Bastón: `output/staff/Warlock_Staff.blend`
 - Casteo: `output/cast_fireball/Warlock_Cast_Preview.blend`
+- Golpe: `output/hit_staff/Warlock_Hit.blend`
+- Trueno: `output/light_strike/Warlock_LightStrike.blend`
+- Dash: `output/dash/Warlock_Dash.blend`; exportación in-place usada por Unity: `output/dash/Warlock_Dash_Unity52.fbx`.
+
+La exportación de dash para Unity contiene personaje, rig y bastón, sin las copias ni los efectos de presentación. Las otras exportaciones de `output/dash/` conservan versiones anteriores. Unity usa `Assets/WarlockDemo/Warlock_Dash.fbx` y el clip derivado `WarlockDash.anim`; después de cambiar el FBX, ejecuta **Tools → Warlock → Install Q Dash** en Edit Mode para reconstruir el clip.
+
+Las comprobaciones de Play Mode están en **Tools → Warlock → Verify Q Dash**, **Verify Fireball Recovery** y **Verify Thunder in Play Mode**. Ejecútalas desde Edit Mode; modifican temporalmente la escena durante la prueba y salen de Play Mode al terminar.
 
 En el casteo, el marcador **RELEASE_FIREBALL** está en el fotograma **16**, con inicio en el 1 y **30 FPS**: `(16 − 1) / 30 = 0,5 s`. El objeto `PREVIEW_ONLY_Fireball` es una ayuda visual y no se exporta como gameplay. Los archivos `timing.json` y `validation.json` documentan la temporización y las comprobaciones de pies, raíz y agarre.
 

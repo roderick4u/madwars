@@ -14,10 +14,19 @@ public class WarlockDemoMovement : MonoBehaviour
     readonly Vector3[] points = { new Vector3(-3,0,-2), new Vector3(3,0,-2), new Vector3(3,0,3), new Vector3(-3,0,3) };
     int waypoint;
     Vector3 cameraOffset = new Vector3(8,11,-8);
-    void Start() { destination = points[0]; hasDestination = true; }
+    void Start() { destination = points[0]; hasDestination = autoDemo; }
+    public void StopForCast() { autoDemo=false; hasDestination=false; speed=0; locomotion="Idle"; }
     public void MoveTo(Vector3 target) { autoDemo=false; destination=new Vector3(target.x,0,target.z); hasDestination=true; }
     void Update()
     {
+        var cast=GetComponent<WarlockFireballCast>();
+        if (Time.timeScale <= 0) return;
+        // Buffer move orders during preparation; execute after the impact/projectile release.
+        if(cast && (cast.IsDash || cast.IsFireball) && Mouse.current != null && Mouse.current.rightButton.wasPressedThisFrame) {
+            Ray queuedRay = viewCamera.ScreenPointToRay(Mouse.current.position.ReadValue());
+            if(new Plane(Vector3.up,Vector3.zero).Raycast(queuedRay,out float queuedDistance)) MoveTo(queuedRay.GetPoint(queuedDistance));
+        }
+        if(cast && cast.MovementLocked) return;
         var keyboard=Keyboard.current;
         if(keyboard!=null && keyboard.spaceKey.wasPressedThisFrame) { autoDemo=!autoDemo; demoTime=0; hasDestination=false; }
         Vector2 input=Vector2.zero;
@@ -47,6 +56,10 @@ public class WarlockDemoMovement : MonoBehaviour
             if(hasDestination) { Vector3 delta=destination-transform.position; delta.y=0; if(delta.magnitude>.10f) direction=delta.normalized; else hasDestination=false; }
         }
         float targetSpeed=direction.sqrMagnitude>.01f?(walking?1.5f:3.8f):0;
+        if(cast && cast.IsRecovery) {
+            if (targetSpeed < .1f) return; // Let the shortened recovery finish if no move was requested.
+            cast.CancelRecovery();
+        }
         speed=Mathf.MoveTowards(speed,targetSpeed,Time.deltaTime*18);
         if(direction.sqrMagnitude>.01f) {
             transform.rotation=Quaternion.RotateTowards(transform.rotation,Quaternion.LookRotation(direction),720*Time.deltaTime);

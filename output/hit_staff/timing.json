@@ -1,0 +1,27 @@
+{
+  "animation": "Hit_Staff_RightToLeft",
+  "perspective": "character right to character left",
+  "fps": 30,
+  "start_frame": 1,
+  "end_frame": 37,
+  "duration_seconds": 1.2,
+  "hit_frame": 18,
+  "trail_frames": [
+    14,
+    24
+  ],
+  "root_motion": false,
+  "trail_in_blend_only": true,
+  "tip_local": [
+    0,
+    0,
+    1.035
+  ],
+  "trail_lifetime_seconds": 0.12666666666666665,
+  "trail_width_m": 0.046,
+  "trail_color": [
+    0.055,
+    1,
+    0.14
+  ]
+}

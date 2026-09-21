@@ -1,0 +1,21 @@
+{
+  "animation": "Light_Strike",
+  "fps": 30,
+  "start_frame": 1,
+  "strike_frame": 25,
+  "strike_seconds": 0.8,
+  "end_frame": 49,
+  "duration_seconds": 1.6,
+  "root_motion": false,
+  "strike_position_blender": [
+    0.0,
+    -1.649999976158142,
+    0.019999999552965164
+  ],
+  "strike_position_unity": [
+    0,
+    0.02,
+    1.65
+  ],
+  "fx_in_blend_only": true
+}
